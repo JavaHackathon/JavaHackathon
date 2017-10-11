@@ -1,4 +1,3 @@
-
 //react imports
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -21,7 +20,7 @@ import ResultsContainer from './containers/ResultsContainer';
 
 //BaseLayout imported...Here
 import ResultCard from './components/ResultCard';
-import SearchForm from './components/SearchForm';
+import SearchForm from './components/UserDetail';
 
 //create store for redux and apply middleware
 const createStoreWithMiddleware = applyMiddleware()(createStore);
