@@ -4,12 +4,15 @@ import {connect} from react-redux;
 import {getResults} from '../actions/';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
+import { checkbox, textfield, typography, button, form-field } from 'material-components-web';
 
 class SearchForm extends Component {
   render() {
     return (
       <div className="search">
-        {/* form goes here */}
+        <form>
+
+        </form>
       </div>
     );
   }
