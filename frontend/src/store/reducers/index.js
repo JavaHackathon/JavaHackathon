@@ -11,6 +11,7 @@ const initialState = {
 const reducer = function(state = initialState, action) {
   switch (action.type) {
     case GET_RESULTS:
+    console.log('hi')
     //added
       let url = 'https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Sydney&key=AIzaSyCwjWWNj0dGJsoYs91DvxGRXOnDahowTUg'
       axios.get(url).then(function(results) {
