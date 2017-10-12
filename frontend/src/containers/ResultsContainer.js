@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import '../styles/App.css';
 
+import ResultCard from '../components/ResultCard';
+
 
 class ResultsContainer extends Component {
   render() {

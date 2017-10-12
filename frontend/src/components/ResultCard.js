@@ -30,4 +30,4 @@ const mapStateToProps = function(state) {
   return {results: results}
 }
 
-export default connect(mapStateToProps)(ResultsCard)
+export default connect(mapStateToProps)(ResultCard)

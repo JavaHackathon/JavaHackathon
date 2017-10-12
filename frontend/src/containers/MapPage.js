@@ -18,11 +18,6 @@ const MapPage = props => {
   ]
 
 
-
-
-
-
-
   constructor(props) {
     super(props)
     this.state = {
