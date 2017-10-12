@@ -1,5 +1,5 @@
-import {combineReducers} from 'redux';
-import {GET_RESULTS} from '../actions/';
+import { combineReducers } from 'redux';
+import { GET_RESULTS } from '../actions/index';
 import update from 'immutability-helper';
 
 const initialState = {
