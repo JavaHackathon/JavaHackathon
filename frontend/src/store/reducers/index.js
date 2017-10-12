@@ -9,9 +9,10 @@ const initialState = {
 const reducer = function(state = initialState, action) {
   switch (action.type) {
     case GET_RESULTS:
-    return update(state, {results: {$set: results
-    }
-  })
+    //need to replace this with the function to get results from api
+      return state
+    // return update(state, {results: {$set: results
+    // }
 
     default:
       return state;
