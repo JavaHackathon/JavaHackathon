@@ -1,8 +1,9 @@
 package com.example.hackathon;
+import javax.xml.stream.Location;
 import java.util.List;
 public class ResultsPage {
 
-        List<Place> results;
+        List<Locations> results;
 
 
         public ResultsPage() {
@@ -10,11 +11,11 @@ public class ResultsPage {
         }
 
 
-        public List<Place> getResults() {
+        public List<Locations> getResults() {
             return results;
         }
 
-        public void setResults(List<Place> results) {
+        public void setResults(List<Locations> results) {
             this.results = results;
         }
 
@@ -25,4 +26,4 @@ public class ResultsPage {
                     '}';
         }
     }
-}
+
