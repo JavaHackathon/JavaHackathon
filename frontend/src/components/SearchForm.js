@@ -10,6 +10,14 @@ class SearchForm extends Component {
   constructor(props){
     super(props)
   }
+
+  _handleChange = (evt) => {
+    let inputName = evt.target.name
+    this.setState({
+      [inputName] : evt.target.value
+    })
+  }
+
   render() {
     console.log(this.props)
     console.log(this.props.getResults())
@@ -22,15 +30,21 @@ class SearchForm extends Component {
             <label htmlFor="location" className="mdc-textfield__label">
             Location
             </label>
-            <input id="location" type="text" className="mdc-textfield__input" placeholder="e.g. New York"/>
+            <input name="location" type="text" onChange={this._handleChange} className="mdc-textfield__input" placeholder="e.g. New York"/>
           </div>
           <div className="mdc-textfield">
             <label htmlFor="type" className="mdc-textfield__label">
             Type of Restaurant
             </label>
-            <input id="type" type="text" className="mdc-textfield__input" placeholder="e.g. Polish"/>
+            <select name="type" onChange={this._handleChange}>
+              <option value="">Search for...</option>
+              <option value="bar">Bars</option>
+              <option value="restaurant">Restaurants</option>
+              <option value="cafe">Cafes</option>
+            </select>
           </div>
-          <button onClick={ () => this.props.getResults()}>Search!</button>
+          <button onClick={ () => this.props.getQuery()}>Search!</button>
+          {/* <button onClick={ () => this.props.getResults()}>Search!</button> */}
         </div>
       </form>
     );
