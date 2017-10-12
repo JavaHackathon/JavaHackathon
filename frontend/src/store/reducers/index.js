@@ -11,9 +11,9 @@ const initialState = {
 const reducer = function(state = initialState, action) {
   switch (action.type) {
     case GET_RESULTS:
-    console.log('am i getting here? this is my reducer ... ',)
-    console.log('this is the state >>>', state)
-      let url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+Sydney&key=AIzaSyCwjWWNj0dGJsoYs91DvxGRXOnDahowTUg'
+    console.log('hi')
+    //added
+      let url = 'https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Sydney&key=AIzaSyCwjWWNj0dGJsoYs91DvxGRXOnDahowTUg'
       axios.get(url).then(function(results) {
         console.log('this is the results that should come back from our fetch: >>>>', results)
         return update(state, {results: {$set: results
