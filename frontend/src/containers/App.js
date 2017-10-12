@@ -12,11 +12,11 @@ class App extends Component {
         <h1>Restaurant Locator (For Now)</h1>
         </header>
       <SearchForm />
-      </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <MapContainer />
+      </div>
     );
   }
 }
