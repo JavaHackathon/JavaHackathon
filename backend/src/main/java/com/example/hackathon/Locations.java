@@ -15,8 +15,8 @@ import org.springframework.web.client.RestTemplate;
         @JsonProperty(value = "name")
         private String photos;
         private String vicinity;
-        private String openingHours; //needs annotation? is opening_hours in json
         @JsonProperty(value = "opening_hours")
+        private String openingHours; //needs annotation? is opening_hours in json
         private String rating;
 
 
@@ -24,7 +24,54 @@ import org.springframework.web.client.RestTemplate;
         // Beans Below
         //
 
-        public Location() {
-
+        public Locations() {
         }
-}
+
+        //
+        //getters and setters below
+        //
+
+        public static String getApiUrl() {
+            return API_URL;
+        }
+
+        public String getLocationName() {
+            return LocationName;
+        }
+
+        public void setLocationName(String locationName) {
+            LocationName = locationName;
+        }
+
+        public String getPhotos() {
+            return photos;
+        }
+
+        public void setPhotos(String photos) {
+            this.photos = photos;
+        }
+
+        public String getVicinity() {
+            return vicinity;
+        }
+
+        public void setVicinity(String vicinity) {
+            this.vicinity = vicinity;
+        }
+
+        public String getOpeningHours() {
+            return openingHours;
+        }
+
+        public void setOpeningHours(String openingHours) {
+            this.openingHours = openingHours;
+        }
+
+        public String getRating() {
+            return rating;
+        }
+
+        public void setRating(String rating) {
+            this.rating = rating;
+        }
+    }

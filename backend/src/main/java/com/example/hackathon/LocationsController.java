@@ -8,15 +8,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.ui.Model;
+
+import javax.xml.stream.Location;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public interface LocationsController {
-    @CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
-    @RestController // or does this need to be a regular @controller?
+@Controller
+public class LocationsController {
+//    @CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
+//    @RestController // or does this need to be a regular @controller?
 
-    public class LocationsController {
-        static final String API_URL = "https://maps.googleapis.com/maps/api/place/nearbysearch/output?parametersAIzaSyCwjWWNj0dGJsoYs91DvxGRXOnDahowTUg";
+   // public class LocationsController {
+        public static String keyword = "";
+        static final String API_URL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?" + keyword + "AIzaSyCwjWWNj0dGJsoYs91DvxGRXOnDahowTUg";
 //
 // api key is as follows: AIzaSyCwjWWNj0dGJsoYs91DvxGRXOnDahowTUg
 //
@@ -29,24 +33,19 @@ public interface LocationsController {
 
         // link up Results page
         @RequestMapping(path = "/Results", method = RequestMethod.GET)
-        public String mediumPop(Model model) { // do i need a stream?
-            List<Place> places = getPlaces("/Results).stream()
-                    // filter by name
-                    //filter by rating
-                    //filter by price level
+        public List<Locations> getPlaces() { // do i need a stream?
 
-            model.addAttribute("places", places);
-            //above dictates the template
-            return "Results";
+            return getPlaces();
         }
 
 
-        public static List<Place> getPlaces(String route) {
+        public static List<Locations> getPlaces(String route) {
             RestTemplate restTemplate = new RestTemplate();
             ResultsPage results = restTemplate.getForObject(API_URL, ResultsPage.class);
             return results.getResults();
 
 
-        }}
-
+        }
 }
+
+
