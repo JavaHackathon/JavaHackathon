@@ -32,7 +32,7 @@ ReactDOM.render(
       <BaseLayout>
       <Switch>
         <Route exact path="/" component={App}/>
-        <Route exact path="/results" component={ResultCard}/>
+        {/* <Route exact path="/results" component={ResultCard}/> */}
       </Switch>
     </BaseLayout>
   </BrowserRouter>
