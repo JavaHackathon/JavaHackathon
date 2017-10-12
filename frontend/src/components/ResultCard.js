@@ -30,8 +30,4 @@ const mapStateToProps = function(state) {
   return {results: results}
 }
 
-<<<<<<< HEAD
-export default connect(mapStateToProps)(ResultsContainer)
-=======
-export default connect(mapStateToProps)(ResultsCard)
->>>>>>> 9e17ae6623d73f44bb55daf901ce0fdbe323f49c
+export default connect(mapStateToProps)(ResultCard)
