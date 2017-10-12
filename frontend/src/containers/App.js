@@ -9,8 +9,8 @@ class App extends Component {
     return (
       <div className="landing-page">
       <div className="jumbotron text-center make-transparent">
-        <h1 className="display-3">Troll your City!</h1>
-        <p className="lead">Find out about places in your area!</p>
+        <h1 className="display-3">Troll your City...</h1>
+        <h3>Find out about places in your area!</h3>
         <SearchForm/>
       </div>
       </div>

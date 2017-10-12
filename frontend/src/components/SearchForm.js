@@ -16,7 +16,7 @@ class SearchForm extends Component {
     console.log('this is the state on the SearchForm', this.state)
     return (
       <form className="search">
-        <h1 className="mdc-typography--display2">Search for restaurants near you</h1>
+        <h1 className="typewriter mx-auto">Search for restaurants near you!</h1>
         <div className="mdc-form-field">
           <div className="mdc-textfield">
             <label htmlFor="location" className="mdc-textfield__label">
