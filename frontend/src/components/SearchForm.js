@@ -7,8 +7,13 @@ import { Link } from 'react-router-dom';
 import { checkbox, textfield, button } from 'material-components-web';
 
 class SearchForm extends Component {
+  constructor(props){
+    super(props)
+  }
   render() {
     console.log(this.props)
+    console.log(this.props.getResults())
+    console.log('this is the state on the SearchForm', this.state)
     return (
       <form className="search">
         <h1 className="mdc-typography--display2">Search for restaurants near you</h1>
@@ -25,13 +30,7 @@ class SearchForm extends Component {
             </label>
             <input id="type" type="text" className="mdc-textfield__input" placeholder="e.g. Polish"/>
           </div>
-          <button onClick={this.props.getResults()}
-            className="mdc-button
-                   mdc-button--raised
-                   mdc-ripple-surface"
-            data-mdc-auto-init="MDCRipple">
-              Search!
-          </button>
+          <button onClick={ () => this.props.getResults()}>Search!</button>
         </div>
       </form>
     );
