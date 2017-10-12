@@ -1,7 +1,7 @@
 package com.example.hackathon;
 
-public interface LocationsController {
-    import org.springframework.web.bind.annotation.RequestMapping;
+
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.client.RestTemplate;
@@ -9,7 +9,7 @@ import org.springframework.ui.Model;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
+public interface LocationsController {
 //
 //
 //
@@ -27,10 +27,13 @@ import java.util.stream.Collectors;
         }
 
 
-        // link up medium-popular-long-name.html
+        // link up Results page
         @RequestMapping(path = "/Results", method = RequestMethod.GET)
         public String mediumPop(Model model) {
-            List<Place> movies = getPlaces("/medium-popular-long-name").stream()
+            List<Place> places = getPlaces("/Results).stream()
+                    // filter by name
+                    //filter by rating
+                    //filter by price level
 
             model.addAttribute("places", places);
             //above dictates the template

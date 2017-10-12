@@ -9,21 +9,22 @@ import org.springframework.web.client.RestTemplate;
     @JsonIgnoreProperties(ignoreUnknown = true)
     public class Locations {
         static final String API_URL = "https://maps.googleapis.com/maps/api/place/nearbysearch/output?parametersAIzaSyCwjWWNj0dGJsoYs91DvxGRXOnDahowTUg";
+// might have to use radar search to avoid 10x multiplier aka only allowed to make 10 search calls per api key
 
-
-        private String title;
-        @JsonProperty(value = "poster_path")
-
-        private String name
-        private String overView;
-        private double popularity;
+        private String LocationName;
+        @JsonProperty(value = "name")
+        private String photos;
+        private String vicinity;
+        private String openingHours; //needs annotation? is opening_hours in json
+        @JsonProperty(value = "opening_hours")
+        private String rating;
 
 
         //
         // Beans Below
         //
 
-        public Movie() {
+        public Location() {
 
         }
 }
