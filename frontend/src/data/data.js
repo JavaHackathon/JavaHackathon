@@ -1,5 +1,4 @@
-const dataList = () => {
-    return [
+const data =
         {
             "html_attributions" : [],
             "next_page_token" : "CoQC_gAAADSyMQJaUDh4lk-aItocTGyrW6F2d1q34fhmFGjsS5x9gU3nsmsPvfsUp8jdIu_y_ioQtmT5TCndRALFMbzaPNZDkkcpSOTBTihNVlAcLjpjo7Rj3KF-ThznJKnt_FpgXmE9bZzoUB_Ntwh0__StusxkUqvaXjDkZo7CPelKN0WfbKZNLNTa0k7tli7iq8qkQWO7eiI0OAAk97aHXbsseX3IOsdMgjGUlEIcLAS_Fa69xel2PZj8PDuNsboOT5Lsx6IXv2mHBIuWY07YcL_ww9nxHcjy7c8raCbaEcnEAGw-SXp6MsatQ9KuWwIDBnii2dImG5yWnPgwYQYhrDC6dUoSEIQssiWOcWSUoiI65zhMvsoaFIt0lZZHzGaUbFs4ixbC6ZSHTbGV",
@@ -824,5 +823,5 @@ const dataList = () => {
             ],
             "status" : "OK"
          }
-    ]
-}
+
+export default data;
