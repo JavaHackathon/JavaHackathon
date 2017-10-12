@@ -13,8 +13,8 @@ public interface LocationsController {
 //
 //
 //
-
-    @Controller
+    @CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
+    @RestController
     public class LocationsController {
         static final String API_URL = "https://maps.googleapis.com/maps/api/place/nearbysearch/output?parametersAIzaSyCwjWWNj0dGJsoYs91DvxGRXOnDahowTUg";
 //
