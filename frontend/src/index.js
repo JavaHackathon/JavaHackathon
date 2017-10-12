@@ -20,7 +20,7 @@ import ResultsContainer from './containers/ResultsContainer';
 
 //BaseLayout imported...Here
 import ResultCard from './components/ResultCard';
-import SearchForm from './components/UserDetail';
+import SearchForm from './components/SearchForm';
 
 //create store for redux and apply middleware
 const createStoreWithMiddleware = applyMiddleware()(createStore);
