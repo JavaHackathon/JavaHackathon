@@ -1,20 +1,20 @@
 package com.example.hackathon;
 
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.ui.Model;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public interface LocationsController {
-//
-//
-//
     @CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
-    @RestController
+    @RestController // or does this need to be a regular @controller?
+
     public class LocationsController {
         static final String API_URL = "https://maps.googleapis.com/maps/api/place/nearbysearch/output?parametersAIzaSyCwjWWNj0dGJsoYs91DvxGRXOnDahowTUg";
 //
@@ -29,7 +29,7 @@ public interface LocationsController {
 
         // link up Results page
         @RequestMapping(path = "/Results", method = RequestMethod.GET)
-        public String mediumPop(Model model) {
+        public String mediumPop(Model model) { // do i need a stream?
             List<Place> places = getPlaces("/Results).stream()
                     // filter by name
                     //filter by rating
