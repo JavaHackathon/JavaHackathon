@@ -4,9 +4,9 @@
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
+    "google-maps-react": "^1.1.0",
     "immutability-helper": "^2.4.0",
     "material-components-web": "^0.22.0",
-    "google-maps-react": "^1.1.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-modal": "^3.0.0",

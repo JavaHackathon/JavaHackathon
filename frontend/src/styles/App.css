@@ -2,9 +2,30 @@
   text-align: center;
 }
 
+h1 {
+  font-family: Rye;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
+}
+
+body {
+  background-image: url("http://img.freepik.com/free-photo/background-blurry-restaurant-shop-interior_1203-4031.jpg?size=338&ext=jpg");  
+  background-size: cover;
+}
+
+label {
+  margin: 5px;
+}
+
+input {
+  margin: 5px;
+}
+
+.make-transparent {
+  opacity: .6;
 }
 
 .App-header {
@@ -26,3 +47,6 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+@import url('https://fonts.googleapis.com/css?family=Rye');
+
