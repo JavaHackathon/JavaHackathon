@@ -9,7 +9,9 @@ class ResultsContainer extends Component {
   render() {
     const {results} = this.props;
     return (
-      <div className="results">
+      <div className="results text-center mx-auto">
+        <h1 className="display-3">Results</h1>
+        <div className="row mx-auto">
         {results.map((result) => {
           return (
             <ResultCard
@@ -18,7 +20,7 @@ class ResultsContainer extends Component {
             />
           )
         })}
-
+      </div>
       </div>
     );
   }

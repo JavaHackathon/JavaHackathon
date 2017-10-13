@@ -20,7 +20,7 @@ h1 {
 }
 
 body {
-  background-image: url("http://img.freepik.com/free-photo/background-blurry-restaurant-shop-interior_1203-4031.jpg?size=338&ext=jpg");  
+  background-image: url("http://img.freepik.com/free-photo/background-blurry-restaurant-shop-interior_1203-4031.jpg?size=338&ext=jpg");
   background-size: cover;
 }
 
@@ -31,6 +31,11 @@ label {
 input {
   margin: 5px;
 }
+
+.result-card {
+  margin: 1%;
+}
+
 
 .make-transparent {
   opacity: .6;
@@ -65,4 +70,3 @@ input {
 }
 
 @import url('https://fonts.googleapis.com/css?family=Rye');
-
