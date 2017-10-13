@@ -4,12 +4,10 @@ import { getResults, getQuery } from '../actions/'
 import update from 'immutability-helper';
 import axios from 'axios';
 import data from '../../data/data'
-// import { data } from '../../data/data'
 
 const initialState = {
   results: data.results,
-  location: "",
-  type: "",
+  locationAndType: "",
   searchQuery: ""
 }
 
@@ -19,7 +17,17 @@ const reducer = function(state = initialState, action) {
         case GET_QUERY:
         console.log(action.payload)
         console.log('testin it ', state);
-        return state;
+        return update(
+          state, {locationAndType:
+              {$set: action.payload}})
+                default:
+                console.log(state)
+                return state;
+  }
+}
+
+export default reducer;
+
 //     case GET_RESULTS:
 //     console.log(state)
 //     //added
@@ -29,10 +37,3 @@ const reducer = function(state = initialState, action) {
 //         return update(state, {results: {$set: results
 //     }})
 // })
-      default:
-      console.log(state)
-      return state;
-  }
-}
-
-export default reducer;

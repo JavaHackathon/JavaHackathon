@@ -25,7 +25,6 @@ class ResultCard extends Component {
 }
 
 const mapStateToProps = function(state) {
-  console.log('mappin state', state)
   let results = state.results;
   return {results: results}
 }
