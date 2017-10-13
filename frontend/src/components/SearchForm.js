@@ -9,7 +9,7 @@ import { checkbox, textfield, button } from 'material-components-web';
 class SearchForm extends Component {
   constructor(props){
     super(props)
-  }
+  } 
 
   _handleChange = (evt) => {
     let inputName = evt.target.name

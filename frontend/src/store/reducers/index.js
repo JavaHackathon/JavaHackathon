@@ -17,7 +17,7 @@ const reducer = function(state = initialState, action) {
   switch (action.type) {
 
         case GET_QUERY:
-        getQuery(action.payload);
+        console.log(action.payload)
         console.log('testin it ', state);
         return state;
 //     case GET_RESULTS:
