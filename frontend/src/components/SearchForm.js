@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 import {connect} from 'react-redux';
-import {getResults} from '../store/actions/index';
+import {getResults, getQuery } from '../store/actions/index';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 import { checkbox, textfield, button } from 'material-components-web';
@@ -20,10 +20,10 @@ class SearchForm extends Component {
 
   render() {
     console.log(this.props)
-    console.log(this.props.getResults())
+    console.log(this.props.getQuery())
     console.log('this is the state on the SearchForm', this.state)
     return (
-      <form className="search">
+      <form onSubmit={this.props.getQuery(this.state)}className="search">
         <h1 className="typewriter mx-auto">Search for restaurants near you!</h1>
         <div className="mdc-form-field">
           <div className="mdc-textfield">
@@ -43,8 +43,7 @@ class SearchForm extends Component {
               <option value="cafe">Cafes</option>
             </select>
           </div>
-          <button onClick={ () => this.props.getQuery()}>Search!</button>
-          {/* <button onClick={ () => this.props.getResults()}>Search!</button> */}
+          <button><Link to={`/Results`}>Search!</Link></button>
         </div>
       </form>
     );
@@ -58,7 +57,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    getResults: getResults
+    getResults: getResults, 
+    getQuery: getQuery
   }, dispatch)
 }
 
