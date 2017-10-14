@@ -1,6 +1,7 @@
 package com.example.hackathon;
 import javax.xml.stream.Location;
 import java.util.List;
+
 public class ResultsPage {
 
         List<Locations> results;
