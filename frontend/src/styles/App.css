@@ -2,7 +2,14 @@
   text-align: center;
 }
 
-h1 {
+body {
+  color: #322C21;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+h1, h4 {
   font-family: Rye;
 }
 
@@ -12,11 +19,6 @@ h1 {
   overflow:hidden;
   -webkit-animation: type 5s steps(50, end);
   animation: type 5s steps(50, end);
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
 }
 
 body {
@@ -34,6 +36,7 @@ input {
 
 .result-card {
   margin: 1%;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 
@@ -69,4 +72,4 @@ input {
   from { width: 0; }
 }
 
-@import url('https://fonts.googleapis.com/css?family=Rye');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Rye');
